@@ -65,3 +65,10 @@
     border-bottom: 2px solid #555;
   }
   
+
+#social-icons {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center ;
+}
