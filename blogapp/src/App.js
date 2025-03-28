@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Post from './pages/Post';
 import About from './pages/About';
+
 function App() {
   return (
     <BrowserRouter>

@@ -5,7 +5,7 @@ const Blog = () => {
   const blogData = [
     {
       title: "Exploring the Mountains",
-      image_url: "/home/anoman/Desktop/geek_team/blogapp/src/assets/pictures/gilfoyle.jpg",
+      image_url: "/home/anoman/Desktop/geek_team/blogapp/public/pictures/gilfoyle.jpg",
       content: "Join us as we delve into the majestic beauty of the world's most breathtaking mountain ranges.",
       published_at: "2025-03-28T10:15:30Z"
     },
@@ -46,7 +46,7 @@ const Blog = () => {
       <h1 className="blog-title">Blog</h1>
       {blogData.map((post, index) => (
         <div key={index} className="blog-post">
-          <img src={post.image_url} alt={post.title} />
+          <img src={`${process.env.PUBLIC_URL}/pictures/gilfoyle.jpg`} alt="" />
           <div className="blog-post-content">
             <h2 className="blog-post-title">{post.title}</h2>
             <p className="blog-post-description">{post.content}</p>
