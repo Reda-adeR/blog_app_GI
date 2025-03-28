@@ -1,0 +1,42 @@
+.head-nav{
+ 
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
+/* identical to box height, or 58px */
+
+/* text/default */
+color: #000000;
+
+
+
+}
+.head-nav-component{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+/* identical to box height */
+
+/* text/default */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.head-nav-component a {
+    color: #000000;
+    text-decoration: none;
+}
+.divnavbar{
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+}
