@@ -5,7 +5,7 @@ const Blog = () => {
   const blogData = [
     {
       title: "Exploring the Mountains",
-      image_url: "https://example.com/images/mountains.jpg",
+      image_url: "/home/anoman/Desktop/geek_team/blogapp/src/assets/pictures/gilfoyle.jpg",
       content: "Join us as we delve into the majestic beauty of the world's most breathtaking mountain ranges.",
       published_at: "2025-03-28T10:15:30Z"
     },
