@@ -105,10 +105,17 @@ function Contact() {
 
       <style jsx>{`
         .contact-page {
-          font-family: Arial, sans-serif;
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 20px;
+        font-family: 'General Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        /* identical to box height, or 58px */
+        /* text/default */
+        color: #000000;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
         }
 
         .title-container {
