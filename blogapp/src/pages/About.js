@@ -4,6 +4,7 @@ import Footer from '../Footer';
 
 const About = () => {
   return (
+    <>
     <div id="about-container">
       <h1 id="about-title">About Us</h1>
       <p id="about-intro">
@@ -27,8 +28,9 @@ const About = () => {
       <p id="about-contact-text">
         Have any questions or suggestions? Reach out to us at <a id="about-contact-link" href="mailto:contact@blogwebapp.com">contact@blogwebapp.com</a>.
       </p>
-      <Footer></Footer>
     </div>
+      <Footer></Footer>
+    </>
   );
 };
 

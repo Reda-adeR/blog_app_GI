@@ -1,6 +1,8 @@
 import React from 'react';
 import '../blog.css';
 
+import Footer from '../Footer';
+
 const Blog = () => {
   const blogData = [
     {
@@ -42,6 +44,9 @@ const Blog = () => {
   ];
 
   return (
+    <>
+    <div className='root'>
+
     <div className="blog-container">
       <h1 className="blog-title">Blog</h1>
       {blogData.map((post, index) => (
@@ -57,6 +62,9 @@ const Blog = () => {
         </div>
       ))}
     </div>
+      </div>
+      <Footer></Footer>
+      </>
   );
 };
 

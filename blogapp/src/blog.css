@@ -22,7 +22,7 @@
     background-color: var(--background-color);
   }
   
-#root-blog {
+.root {
   display: flex;
   justify-content: center;
 }

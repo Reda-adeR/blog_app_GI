@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from '../Footer';
 
 function Post() {
   const [formData, setFormData] = useState({
@@ -35,6 +36,7 @@ function Post() {
   };
 
   return (
+    <>
     <div className="post-page">
       <h1>Create New Post</h1>
       <form onSubmit={handleSubmit}>
@@ -48,7 +50,7 @@ function Post() {
             onChange={handleChange}
             required
             placeholder="Enter post title"
-          />
+            />
         </div>
         
         <div>
@@ -61,7 +63,7 @@ function Post() {
             required
             placeholder="Write your post content here"
             rows="10"
-          />
+            />
         </div>
 
         <div>
@@ -73,7 +75,7 @@ function Post() {
             value={formData.image_url}
             onChange={handleChange}
             placeholder="Enter image URL (https://...)"
-          />
+            />
         </div>
         
         <button type="submit">Submit Post</button>
@@ -85,36 +87,38 @@ function Post() {
           max-width: 800px;
           margin: 20px auto;
           padding: 20px;
-        }
-        form {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
-        label {
-          margin-bottom: 5px;
-          font-weight: bold;
-        }
-        input, textarea {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 10px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-        }
-        button {
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-        button:hover {
-          background-color: #0056b3;
-        }
-      `}</style>
+          }
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            }
+            label {
+              margin-bottom: 5px;
+              font-weight: bold;
+              }
+              input, textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                }
+                button {
+                  padding: 10px 20px;
+                  background-color: #007bff;
+                  color: white;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  }
+                  button:hover {
+                    background-color: #0056b3;
+                    }
+                    `}</style>
     </div>
+    <Footer></Footer>
+    </>
   );
 }
  
