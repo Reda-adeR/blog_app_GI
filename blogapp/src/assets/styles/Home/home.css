@@ -1,0 +1,55 @@
+.header-home{
+
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 210px;
+line-height: 100%;
+/* identical to box height, or 210px */
+text-transform: uppercase;
+text-align: center;
+/* text/inverse */
+color: #000000;
+}
+.pHeadHome{
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 104px;
+line-height: 110%;
+/* or 114px */
+text-transform: uppercase;
+
+/* text/default */
+color: #000000;
+
+}
+.pHeadHome2{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 180%;
+/* or 32px */
+margin-bottom: 60px;
+/* text/default */
+color: #000000;
+
+
+
+}
+.sousHeadHome{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 160%;
+/* or 22px */
+
+/* text/default */
+color: #000000;
+
+}
