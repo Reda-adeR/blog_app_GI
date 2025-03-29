@@ -124,10 +124,8 @@ app.get("/blogs", async (req, res) => {
 app.get("/auth", (req, res) => {
     if (req.session.user) {
         res.status(200).json({ user: req.session.user });
-        console.log("yes")
     } else {
         res.status(401).json({ error: "Not authenticated" });
-        console.log("no")
 
     }
 });
