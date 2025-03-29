@@ -8,7 +8,7 @@ const NavbarHome = () => {
       <Row>
         <Col>
         <h3 className='head-nav'>
-          FYFRE MAGAZINE
+          <img className='logoPic' src="/pictures/logo.png" alt='' />
         </h3>
         </Col>
         <Col>

@@ -29,8 +29,8 @@ color: #000000;
 
 font-family: 'General Sans';
 font-style: normal;
-font-weight: 400;
-font-size: 18px;
+font-weight: 500;
+font-size: 25px;
 line-height: 180%;
 /* or 32px */
 margin-bottom: 60px;
@@ -54,7 +54,7 @@ color: #000000;
 
 }
 .imgHomeBlog{
-    width: 86%;
+    width: 100%;
     height: 86%;
     
 }
