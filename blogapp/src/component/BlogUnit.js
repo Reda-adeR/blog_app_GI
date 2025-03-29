@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../blogUnit.css';
+import { Col, Container, Row } from 'react-bootstrap';
 
 
 
@@ -11,7 +12,11 @@ const BlogUnit = ( {index, post} ) => {
         navigate(`/blog/${index}`, { state : {post}}); // Replace '/desired-route' with your target path
     };
     return (
-    <div key={index} className="blog-post">
+      <>
+      <Container>
+        <Row>
+          <Col md={2}>
+          <div key={index} className="blog-post">
           <img src={`${process.env.PUBLIC_URL}${post.image_url}`} alt="" />
           <div className="blog-post-content" onClick={handleClick}>
             <h2 className="blog-post-title">{post.title}</h2>
@@ -21,7 +26,13 @@ const BlogUnit = ( {index, post} ) => {
             </p>
           </div>
     </div>
-        // console.log(index, post.title);
+          </Col>
+          
+        </Row>
+      </Container>
+    
+    </>
+       
     )
 }
 

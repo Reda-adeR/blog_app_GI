@@ -5,6 +5,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 import { motion } from "framer-motion";
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   const newsItems = [
     " Newsletter+++",
@@ -47,23 +48,30 @@ const Footer = () => {
       ))}
     </motion.div>
   </div>
+  <Container>
   <Row>
-    <Col sm={6}>
+    <Col sm={8}>
     <p className='parafooter'>Design News to your inbox</p>
     </Col>
-    <Col sm={6}>
+    <Col sm={4}>
       <Row className='dormfooter'>
       <Col><input type='email' className='inputfooter' placeholder='EMAIL'/></Col>
       <Col><input type='submit' className='btnFoter' value="ENVOYER"/></Col>
       </Row>
     </Col>
   </Row>
+  </Container>
   <Container className="mt-4">
-      <Row>
-        <Col sm={4}>
-          <p className="text-item-footer">Art</p>
-          <p className="text-item-footer">Magazine</p>
-          <p className="text-item-footer">Styleguide</p>
+    
+      <Row className='CONTAINERFOOTER'>
+        <Col sm={4} >
+        
+          <p className="text-item-footer"><a className='aFooter' href="/">Home</a></p>
+          <p className="text-item-footer"><a className='aFooter' href="/blog">Blog</a></p>
+          <p className="text-item-footer"><a className='aFooter' href="/post">Post</a></p>
+          <p className="text-item-footer"><a className='aFooter' href="/about">About</a></p>
+          <p className="text-item-footer"><a className='aFooter' href="/contact">Contact</a></p>
+
         </Col>
         <Col sm={4}>
           <p className="text-item-footer">Design</p>
@@ -78,7 +86,9 @@ const Footer = () => {
       </Row>
     </Container>
       <div id="footer-bottom">
-        <p>© Made by Pawel Gola - Powered by Webflow</p>
+        <div className='footerdivpara'>
+        <p >© Made by 5 Stars - Powered by 5 Stars</p>
+        </div>
         <div id="social-icons">
 
         <FaFacebook size={40} />

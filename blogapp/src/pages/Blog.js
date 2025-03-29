@@ -3,6 +3,8 @@ import '../blog.css';
 
 
 import BlogUnit from '../component/BlogUnit';
+import { Col, Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Blog = () => {
   const blogData = [
@@ -91,15 +93,58 @@ const Blog = () => {
       published_at: "2025-03-26T08:45:00Z"
     }
   ];
+  const navigate = useNavigate();
+    
+  const handleClick = (index, post) => {
+    navigate(`/blog/${index}`, { state: { post } });
+};
+
+
 
   return (
     <>
-    <div className='root'>
+    <Container className='containerhead'>
+      <Row>
+        <Col>
+          <h1 className='header-home'>BLOG</h1>
+        </Col>
+      </Row>
+      
+    </Container>
+    
 
     <div className="blog-container">
       {/* <h1 className="blog-title">Blog</h1> */}
+      <Container >
+        <Row>
       {blogData.map((post, index) => (
-        <BlogUnit key={index} index={index} post={post} />
+    
+            <Col className='colblogpagetable' md={4} key={index}>
+                <div className="blog-post">
+                    <img src='/pictures/blogPage.png' className='imgbloglistpage'/>
+                    {/* <img src={`${process.env.PUBLIC_URL}${post.image_url}`} alt="" /> */}
+                    <div className="blog-post-content" onClick={() => handleClick(index, post)}>
+                        <h2 className="blog-post-title">{post.title}</h2>
+                        <p className='loremparablog'>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut. Porttitor leo a diam.
+                        </p>
+                        
+                        <Col>
+                          <p className='sousHeadHome'>
+                            <strong>Date </strong>
+                            {new Date(post.published_at).toLocaleDateString('en-GB', {
+                              day: '2-digit',
+                              month: 'long',
+                              year: 'numeric'
+                            })}
+                          </p>
+                          <button className='btnvoir'>Voir Plus</button>
+                        </Col>
+
+                    </div>
+                </div>
+            </Col>
+       
         // <div key={index} className="blog-post">
         //   <img src={`${process.env.PUBLIC_URL}/pictures/gilfoyle.jpg`} alt="" />
         //   <div className="blog-post-content">
@@ -111,8 +156,9 @@ const Blog = () => {
         //   </div>
         // </div>
       ))}
+       </Row>
+       </Container>
     </div>
-      </div>
       
       </>
   );
