@@ -127,7 +127,7 @@ function PostDetail() {
                 }
                 `}</style>
     </div>
-    <Footer></Footer>
+    
       </>
   );
 }

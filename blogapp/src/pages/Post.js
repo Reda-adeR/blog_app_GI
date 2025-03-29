@@ -136,7 +136,7 @@ function Post() {
         }
       `}</style>
     </div>
-    <Footer></Footer>
+    
     </>
   );
 }

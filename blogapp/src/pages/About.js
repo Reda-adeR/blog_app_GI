@@ -29,7 +29,7 @@ const About = () => {
         Have any questions or suggestions? Reach out to us at <a id="about-contact-link" href="mailto:contact@blogwebapp.com">contact@blogwebapp.com</a>.
       </p>
     </div>
-      <Footer></Footer>
+      
     </>
   );
 };
