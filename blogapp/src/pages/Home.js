@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Footer from '../Footer';
 const Home = () => {
   const newsItems = [
-    "Breaking News: React 19 is coming soon!",
+    "Breaking News: React 19 is coming soon!", 
     "Tech Update: AI is evolving faster than ever.",
     "Sports: The Champions League final is approaching!",
     "Weather: Expect sunny skies this weekend.",

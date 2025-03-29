@@ -50,6 +50,7 @@ const Blog = () => {
     <div className="blog-container">
       <h1 className="blog-title">Blog</h1>
       {blogData.map((post, index) => (
+        // <BlogUnit  />
         <div key={index} className="blog-post">
           <img src={`${process.env.PUBLIC_URL}/pictures/gilfoyle.jpg`} alt="" />
           <div className="blog-post-content">
