@@ -4,11 +4,13 @@
   align-items: center;
   justify-content: center;
 }
-
-.blog-container {
+.containerhead{
+  margin-bottom: 30px;
+}
+/* .blog-container {
       width: 80vw;
       height: 80vh;
-      /* background-color: aqua; */
+      /* background-color: aqua; 
       display: flex;
       flex-wrap: wrap;
       gap: 2px;
@@ -16,4 +18,62 @@
       margin-top: 1vh;
       overflow-y: scroll;
       box-sizing: border-box;
+} */
+
+.colblogpagetable{
+  border: 1px solid black;
+  width: 507px;
+  height: 864px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+.imgbloglistpage{
+  /* Frame 21 */
+
+width: 406px;
+height: 406px;
+margin-bottom: 30px;
+
+}
+.blog-post-title{
+ 
+
+/* heading/h3 */
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+margin-bottom: 30px;
+/* text/default */
+color: #000000;
+}
+.loremparablog{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 180%;
+/* or 29px */
+
+/* text/default */
+color: #000000;
+
+
+margin-bottom: 30px;
+}
+.btnvoir{
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius:25px;
+  float: right;
+}
+.blog-container{
+  margin-bottom: 30px;
 }

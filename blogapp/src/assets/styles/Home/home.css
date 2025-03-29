@@ -12,6 +12,13 @@ text-align: center;
 /* text/inverse */
 color: #000000;
 }
+.rowbloglisthead{
+    display: flex;
+    justify-content: center;
+}
+.colsousimageblog.col-md-8 {
+    margin-right: 50px;
+  }
 .pHeadHome{
 font-family: 'General Sans';
 font-style: normal;

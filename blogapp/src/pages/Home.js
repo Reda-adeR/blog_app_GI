@@ -54,7 +54,7 @@ const Home = () => {
       <img className='imgHomeBlog' src="/pictures/Home.jpg" alt="img blog"/>
     </Col>
   </Row>
-  <Row>
+  <Row className='rowbloglisthead'>
     <Col md={8} className='colsousimageblog' >
     <Row className='rowBlogListHome'>
         <Col sm={3}>
