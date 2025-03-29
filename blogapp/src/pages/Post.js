@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Footer from '../Footer';
 
 function Post() {
   const [formData, setFormData] = useState({
@@ -136,7 +135,6 @@ function Post() {
         }
       `}</style>
     </div>
-    <Footer></Footer>
     </>
   );
 }

@@ -3,7 +3,6 @@ import '../blog.css';
 
 
 import BlogUnit from '../component/BlogUnit';
-import Footer from '../Footer';
 
 const Blog = () => {
   const blogData = [
@@ -114,7 +113,6 @@ const Blog = () => {
       ))}
     </div>
       </div>
-      <Footer></Footer>
       </>
   );
 };
