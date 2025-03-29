@@ -2,6 +2,7 @@ import React from 'react'
 import {Row,Col, Container, Table} from 'react-bootstrap'
 import "../assets/styles/Home/home.css"
 import { motion } from "framer-motion";
+import Footer from '../Footer';
 const Home = () => {
   const newsItems = [
     "Breaking News: React 19 is coming soon!", 

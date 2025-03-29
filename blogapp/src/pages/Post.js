@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Footer from '../Footer';
 
 function Post() {
   const [formData, setFormData] = useState({
@@ -35,6 +36,7 @@ function Post() {
   };
 
   return (
+    <>
     <div className="post-page">
       <h1>Create New Post</h1>
       <div className="title-underline"></div>
@@ -49,7 +51,7 @@ function Post() {
             onChange={handleChange}
             required
             placeholder="Enter post title"
-          />
+            />
         </div>
         
         <div>
@@ -62,7 +64,7 @@ function Post() {
             required
             placeholder="Write your post content here"
             rows="10"
-          />
+            />
         </div>
 
         <div>
@@ -74,7 +76,7 @@ function Post() {
             value={formData.image_url}
             onChange={handleChange}
             placeholder="Enter image URL (https://...)"
-          />
+            />
         </div>
         
         <button type="submit">Submit Post</button>
@@ -134,6 +136,8 @@ function Post() {
         }
       `}</style>
     </div>
+    <Footer></Footer>
+    </>
   );
 }
 

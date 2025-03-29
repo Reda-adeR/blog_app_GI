@@ -1,42 +1,76 @@
-.head-nav{
- 
-font-family: 'General Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 120%;
-/* identical to box height, or 58px */
-
-/* text/default */
-color: #000000;
-
-
-
-}
-.head-nav-component{
-
-font-family: 'General Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 27px;
-/* identical to box height */
-
-/* text/default */
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-}
-.head-nav-component a {
-    color: #000000;
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation bar container */
+  .divnavbar {
+    margin-top: 20px;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+    padding: 10px 0;
+    font-family: 'General Sans', sans-serif;
+  }
+  
+  /* Logo/Header styling */
+  .head-nav {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #000;
+    text-align: left;
+    padding-left: 15px;
+  }
+  
+  /* Navigation links container */
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+  }
+  
+  /* Individual navigation link styling */
+  .head-nav-component {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000;
+    margin-left: 20px;
+    position: relative;
+  }
+  
+  /* Link appearance */
+  .head-nav-component a {
+    color: inherit;
     text-decoration: none;
-}
-.divnavbar{
-    margin-top: 0px;
-    border-bottom: 1px solid black;
-}
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  .head-nav-component a:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .divnavbar {
+      text-align: center;
+    }
+  
+    .head-nav {
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      padding-right: 0;
+    }
+  
+    .head-nav-component {
+      margin: 10px 0;
+    }
+  }
