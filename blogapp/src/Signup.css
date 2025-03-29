@@ -1,0 +1,132 @@
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'General Sans', sans-serif;
+  }
+  
+  .signup-title {
+    font-family: 'General Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-family: 'General Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #333333;
+  }
+  
+  .form-group input::placeholder {
+    color: #666666;
+  }
+  
+  .signup-button {
+    background: #000000;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'General Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+  }
+  
+  .signup-button:hover {
+    background: #333333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .signup-container {
+      padding: 20px 15px;
+    }
+  
+    .signup-title {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  
+    .form-group label {
+      font-size: 14px;
+    }
+  
+    .form-group input {
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+  
+    .signup-button {
+      padding: 10px 18px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .signup-container {
+      max-width: 100%;
+      padding: 15px 10px;
+    }
+  
+    .signup-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  
+    .form-group label {
+      font-size: 12px;
+    }
+  
+    .form-group input {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+  
+    .signup-button {
+      padding: 8px 16px;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+  }

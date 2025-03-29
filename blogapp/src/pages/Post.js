@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import '../post.css';
+
 
 function Post() {
   const [formData, setFormData] = useState({
@@ -18,12 +20,33 @@ function Post() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     console.log('New post:', formData);
     
-    alert('Post created successfully!');
+    try {
+      const response = await fetch("http://localhost:3001/postBlog", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify( formData ),
+      });
+      alert(formData.published_at);
+      const data = await response.json();
+      if ( response.ok )
+      {
+        setFormData("");
+        alert('Post created successfully!');
+      }
+      else {
+        alert("error / .. ", data.error);
+      }
+    }catch (err){
+      alert("error .,; :", err);
+
+    }
     
     setFormData({
       title: '',
@@ -81,58 +104,9 @@ function Post() {
       </form>
       
       {/* Basic styling */}
-      <style jsx>{`
-        .post-page {
-        font-family: 'General Sans';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 120%;
-        color: #000000;
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        }
-        h1{
-          font-size: 4rem;
-          font-weight: bold;
-          line-height: 1;
-          margin-bottom: 10px;
-        }
-        .title-underline {
-          width: 100%;
-          height: 8px;
-          background-color: #000;
-          margin-bottom:20px;
-        }
-        form {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-        }
-        label {
-          margin-bottom: 5px;
-          font-weight: bold;
-        }
-        input, textarea {
-          width: 100%;
-          padding: 8px;
-          margin-bottom: 10px;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-        }
-        button {
-          padding: 10px 20px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-        button:hover {
-          background-color: #0056b3;
-        }
-      `}</style>
+      {/* <style jsx>{`
+        
+      `}</style> */}
     </div>
   );
 }
