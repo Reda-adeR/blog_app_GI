@@ -12,12 +12,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  padding: 30px;
 }
 
-html ,body{
+/* html ,body{
   overflow: hidden;
-}
+} */
 
 
 code {
@@ -26,3 +26,9 @@ code {
 }
 
 
+/* App.css ou un fichier CSS global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

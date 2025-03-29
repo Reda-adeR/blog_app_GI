@@ -4,6 +4,7 @@ import Blog from './pages/Blog';
 import Post from './pages/Post';
 import About from './pages/About';
 import NavbarHome from './component/NavbarHome';
+import Footer from './Footer';
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/post" element={<Post />} /> 
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

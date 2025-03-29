@@ -2,7 +2,7 @@
     width: 100%;
     background: black;
     color: white;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
     text-align: center;
     font-family: Arial, sans-serif;
   }
@@ -85,4 +85,101 @@
     margin-left: 10px;
     cursor: pointer;
   }
-  
+  .parafooter{
+
+
+/* heading/medium */
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 80px;
+line-height: 110%;
+/* or 88px */
+text-transform: uppercase;
+text-align: start;
+color: #F9F9F9;
+
+
+  }
+  .inputfooter{
+    /* input */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 15px;
+gap: 10px;
+
+width: 309px;
+height: 50px;
+
+background: #FFFFFF;
+border: none;
+
+/* text/default */
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 180%;
+/* identical to box height, or 29px */
+
+/* text/muted */
+color: rgba(0, 0, 0, 0.6);
+
+
+
+  }
+  .btnFoter{
+    /* button */
+    margin-left: -60px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 24px;
+gap: 10px;
+
+width: 104px;
+height: 50px;
+
+/* background/default */
+background: #FFFFFF;
+border: none;
+
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+text-transform: uppercase;
+
+/* text/default */
+color: #000000;
+
+  }
+  .dormfooter{
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 50px !important;
+  }
+  .text-item-footer{
+    /* Art */
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 180%;
+text-align: start;
+/* identical to box height, or 29px */
+
+/* text/inverse */
+color: #FFFFFF;
+
+
+  }

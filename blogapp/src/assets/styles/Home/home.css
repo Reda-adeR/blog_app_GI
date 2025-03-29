@@ -53,3 +53,206 @@ line-height: 160%;
 color: #000000;
 
 }
+.imgHomeBlog{
+    width: 86%;
+    height: 86%;
+    
+}
+.colimghome{
+    display: flex;
+    justify-content: center;
+}
+.headbloghome{
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+margin-bottom: 30px;
+/* text/default */
+color: #000000;
+
+
+}
+.rowBlogListHome{
+    border-bottom: 1px solid black;
+    padding-bottom: 20PX;
+    padding-top: 20px;
+}
+.colsousimageblog{
+    padding-right: 50px;
+}
+.printmagazin{
+ 
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+text-transform: uppercase;
+
+/* text/default */
+color: #000000;
+
+}
+.printmagazindate{
+ 
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 120%;
+/* identical to box height, or 58px */
+
+/* text/default */
+color: #000000;
+
+
+
+}
+.btnposter{
+margin-top: 20px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 24px;
+gap: 10px;
+width: 106px;
+height: 50px;
+background: #000000;
+/* BUtton */
+border: none;
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 19px;
+/* identical to box height */
+text-transform: uppercase;
+
+/* text/inverse */
+color: #FFFFFF;
+}
+.sousMultiple{
+
+/* heading/h4 */
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 120%;
+/* identical to box height, or 29px */
+
+/* text/default */
+color: #000000;
+
+}
+.sousMultipleNumb{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 120%;
+/* identical to box height, or 29px */
+
+/* text/default */
+color: #000000;
+
+
+}
+.rowPopular{
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+}
+.divmultiple{
+    margin-top: 30px;
+}
+.newsbg{
+/* newsletter */
+
+padding: 30px;
+
+
+width: 369px;
+height: 301px;
+
+background: #F8F8F8;
+
+
+}
+.newsletter{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 130%;
+
+color: #000000;
+}
+
+.inpnewsletter{
+    /* input */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 15px;
+gap: 10px;
+
+width: 309px;
+height: 49px;
+
+background: #FFFFFF;
+
+border: none;
+}
+.btnspacenewsletter{
+    display: flex;
+    justify-content: end;
+}
+.aythor{
+
+/* heading/large uppercase */
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 104px;
+line-height: 110%;
+/* or 114px */
+text-transform: uppercase;
+margin-bottom: 20px;
+/* text/default */
+color: #000000;
+}
+
+.table-bordered {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td {
+    border: 1px solid black !important;
+    padding: 30px 50px 30px 0px;
+    
+  }
+  .profile-img{
+    width: 90%;
+    margin-left: 15%;
+  }
+  .coltable{
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+ 
+  
+  
+  
