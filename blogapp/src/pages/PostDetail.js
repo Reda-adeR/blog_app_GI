@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import Footer from '../Footer';
 
 function PostDetail() {
   const loc = useLocation();
@@ -127,7 +126,6 @@ function PostDetail() {
                 }
                 `}</style>
     </div>
-    
       </>
   );
 }
