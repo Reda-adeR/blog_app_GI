@@ -37,6 +37,7 @@ function Post() {
   return (
     <div className="post-page">
       <h1>Create New Post</h1>
+      <div className="title-underline"></div>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title:</label>
@@ -82,9 +83,27 @@ function Post() {
       {/* Basic styling */}
       <style jsx>{`
         .post-page {
-          max-width: 800px;
-          margin: 20px auto;
-          padding: 20px;
+        font-family: 'General Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: #000000;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        }
+        h1{
+          font-size: 4rem;
+          font-weight: bold;
+          line-height: 1;
+          margin-bottom: 10px;
+        }
+        .title-underline {
+          width: 100%;
+          height: 8px;
+          background-color: #000;
+          margin-bottom:20px;
         }
         form {
           display: flex;
@@ -117,5 +136,5 @@ function Post() {
     </div>
   );
 }
- 
+
 export default Post;

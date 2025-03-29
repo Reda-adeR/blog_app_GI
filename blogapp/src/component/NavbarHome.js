@@ -25,6 +25,9 @@ const NavbarHome = () => {
             <Col>
               <h5 className='head-nav-component'><Link to="/about">About</Link></h5>
             </Col>
+            <Col>
+              <h5 className='head-nav-component'><Link to="/contact">Contact</Link></h5>
+            </Col>
           </Row>
         </Col>
       </Row>
