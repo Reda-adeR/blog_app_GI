@@ -6,7 +6,10 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import NavbarHome from './component/NavbarHome';
 import Footer from './Footer';
+import emailjs from '@emailjs/browser';
+
 import PostDetail from './pages/PostDetail';
+emailjs.init('Kvvg10sNrLGAXqe-A');
 function App() {
   return (
     <BrowserRouter>

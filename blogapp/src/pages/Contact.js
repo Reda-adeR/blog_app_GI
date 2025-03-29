@@ -1,19 +1,18 @@
-// pages/Contact.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
-  // State for form inputs
   const [formData, setFormData] = useState({
     prenom: '',
     nom: '',
     email: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const navigate = useNavigate();
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -22,20 +21,36 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       alert('Veuillez entrer une adresse email valide.');
       return;
     }
-  
-    console.log('Contact Form Data:', formData);
-    alert('Message envoyé avec succès !');
-    setFormData({ prenom: '', nom: '', email: '', message: '' });
-    navigate('/');
+
+    setIsSubmitting(true);
+    
+    try {
+      const result = await emailjs.sendForm(
+        'service_r2xfujz',        // Votre Service ID
+        'template_7r6viii',       // Votre Template ID
+        e.target,                 // Le formulaire
+        'Kvvg10sNrLGAXqe-A'      // Votre Public Key
+      );
+      
+      console.log('Email envoyé avec succès:', result.text);
+      alert('Message envoyé avec succès !');
+      setFormData({ prenom: '', nom: '', email: '', message: '' });
+      navigate('/');
+    } catch (error) {
+      console.error('Erreur détaillée EmailJS:', error);
+      alert(`Une erreur s'est produite: ${error.text || 'Vérifiez votre configuration EmailJS et réessayez.'}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -56,6 +71,7 @@ function Contact() {
             onChange={handleChange}
             required
             placeholder="Entrez votre prénom"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -69,6 +85,7 @@ function Contact() {
             onChange={handleChange}
             required
             placeholder="Entrez votre nom"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -82,6 +99,7 @@ function Contact() {
             onChange={handleChange}
             required
             placeholder="Entrez votre email"
+            disabled={isSubmitting}
           />
         </div>
 
@@ -95,27 +113,30 @@ function Contact() {
             required
             placeholder="Écrivez votre message ici"
             rows="5"
+            disabled={isSubmitting}
           />
         </div>
 
-        <button type="submit" className="submit-button">
-          Valider
+        <button 
+          type="submit" 
+          className="submit-button"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Envoi en cours...' : 'Valider'}
         </button>
       </form>
 
       <style jsx>{`
         .contact-page {
-        font-family: 'General Sans';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 120%;
-        /* identical to box height, or 58px */
-        /* text/default */
-        color: #000000;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
+          font-family: 'General Sans';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 120%;
+          color: #000000;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
         }
 
         .title-container {
@@ -124,7 +145,7 @@ function Contact() {
         }
 
         .page-title {
-          font-size: 4rem; /* Match the large headline style from Home */
+          font-size: 4rem;
           font-weight: bold;
           line-height: 1;
           margin-bottom: 10px;
@@ -132,7 +153,7 @@ function Contact() {
 
         .title-underline {
           width: 100%;
-          height: 8px; /* Thick black line like on Home */
+          height: 8px;
           background-color: #000;
         }
 
@@ -148,7 +169,7 @@ function Contact() {
         }
 
         label {
-          font-size: 1.5rem; /* Larger labels for consistency */
+          font-size: 1.5rem;
           font-weight: bold;
           margin-bottom: 5px;
         }
@@ -169,7 +190,7 @@ function Contact() {
         }
 
         .submit-button {
-          background-color: #000; /* Black button to match the aesthetic */
+          background-color: #000;
           color: white;
           padding: 12px 30px;
           border: none;
@@ -181,8 +202,13 @@ function Contact() {
           transition: background-color 0.2s;
         }
 
-        .submit-button:hover {
+        .submit-button:hover:not(:disabled) {
           background-color: #333;
+        }
+
+        .submit-button:disabled {
+          background-color: #666;
+          cursor: not-allowed;
         }
 
         @media (max-width: 768px) {
