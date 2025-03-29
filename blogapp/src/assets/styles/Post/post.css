@@ -1,0 +1,84 @@
+.post-title{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 104px;
+line-height: 110%;
+/* or 114px */
+text-transform: uppercase;
+
+color: #000000;
+
+
+
+}
+.post-title-para{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 180%;
+/* or 36px */
+
+/* text/default */
+color: #000000;
+
+
+
+}
+.profile{
+
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+
+/* text/default */
+color: #000000;
+
+text-align: center;
+border-bottom: 1px solid black;
+padding-bottom: 15px;
+}
+.divprofilesection{
+    padding: 30px;
+}
+.clasparablog{
+margin-top: 20px;
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 180%;
+/* or 29px */
+
+/* text/default */
+color: #000000;
+
+
+
+}
+.rowblogcont{
+    border-bottom: 2px solid black;
+}
+.headerblog{
+
+/* heading/large uppercase */
+font-family: 'General Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 104px;
+line-height: 110%;
+/* or 114px */
+text-transform: uppercase;
+
+/* text/default */
+color: #000000;
+
+margin-top: 30px;
+margin-bottom: 30px;
+}
